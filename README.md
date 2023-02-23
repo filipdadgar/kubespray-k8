@@ -34,8 +34,6 @@ brew install hudochenkov/sshpass/sshpass
         ssh_key_file: .ssh/{{ssh_key_filename}}
         ssh_key_passphrase: "{{ssh_passphrase}}"
         force: no
-
-#### Alternative 1: ansible-playbook -i inventory/kubecluster/hosts.yml --become --become-user=root cluster.yml --private-key /Users/<user>/.ssh/id_rsa_ansible -kK
 #### Usage
 
 Install Ansible according to [Ansible installation guide](/docs/ansible.md#installing-ansible)
@@ -104,6 +102,7 @@ cat inventory/mycluster/group_vars/k8s_cluster/k8s-cluster.yml
 
 # deploy Kubernetes Cluster
 ansible-playbook -i inventory/kubecluster/hosts.yml --become --become-user=root cluster.yml
+Alternative 1: ansible-playbook -i inventory/kubecluster/hosts.yml --become --become-user=root cluster.yml --private-key /Users/<user>/.ssh/id_rsa_ansible -kK
 
 # check Kubernetes cluster
 kubectl get nodes --kubeconfig=/etc/kubernetes/admin.conf
