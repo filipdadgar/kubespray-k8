@@ -2,9 +2,6 @@
 
 ![Kubernetes Logo](https://raw.githubusercontent.com/kubernetes-sigs/kubespray/master/docs/img/kubernetes-logo.png)
 
-If you have questions, check the documentation at [kubespray.io](https://kubespray.io) and join us on the [kubernetes slack](https://kubernetes.slack.com), channel **\#kubespray**.
-You can get your invite [here](http://slack.k8s.io/)
-
 ## Quick Start
 
 Below are several ways to use Kubespray to deploy a Kubernetes cluster.
