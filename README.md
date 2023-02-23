@@ -92,7 +92,7 @@ kubectl get nodes --kubeconfig=/etc/kubernetes/admin.conf
 # copy the kubeconfig file
 scp masternode:/etc/kubernetes/admin.conf ~/.kube/config
 
-```raw
+
 ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
 ```
 This likely indicates that a task depends on a module present in ``requirements.txt``.
