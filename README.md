@@ -8,7 +8,7 @@ Below are several ways to use Kubespray to deploy a Kubernetes cluster.
 
 ### Ansible
 
-# Make sure having keys ready:
+### Make sure having keys ready:
 
 brew install hudochenkov/sshpass/sshpass
 
@@ -35,7 +35,7 @@ brew install hudochenkov/sshpass/sshpass
         ssh_key_passphrase: "{{ssh_passphrase}}"
         force: no
 
-## Alternative 1: ansible-playbook -i inventory/kubecluster/hosts.yml --become --become-user=root cluster.yml --private-key /Users/<user>/.ssh/id_rsa_ansible -kK
+#### Alternative 1: ansible-playbook -i inventory/kubecluster/hosts.yml --become --become-user=root cluster.yml --private-key /Users/<user>/.ssh/id_rsa_ansible -kK
 #### Usage
 
 Install Ansible according to [Ansible installation guide](/docs/ansible.md#installing-ansible)
