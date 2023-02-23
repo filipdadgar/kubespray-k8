@@ -87,36 +87,3 @@ scp masternode:/etc/kubernetes/admin.conf ~/.kube/config
 ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
 ```
 This likely indicates that a task depends on a module present in ``requirements.txt``.
-
-## Documents
-
-- [Requirements](#requirements)
-- [Kubespray vs ...](docs/comparisons.md)
-- [Getting started](docs/getting-started.md)
-- [Setting up your first cluster](docs/setting-up-your-first-cluster.md)
-- [Ansible inventory and tags](docs/ansible.md)
-- [Integration with existing ansible repo](docs/integration.md)
-- [Deployment data variables](docs/vars.md)
-- [DNS stack](docs/dns-stack.md)
-- [HA mode](docs/ha-mode.md)
-- [Network plugins](#network-plugins)
-- [Vagrant install](docs/vagrant.md)
-- [Flatcar Container Linux bootstrap](docs/flatcar.md)
-- [Fedora CoreOS bootstrap](docs/fcos.md)
-- [Debian Jessie setup](docs/debian.md)
-- [openSUSE setup](docs/opensuse.md)
-- [Downloaded artifacts](docs/downloads.md)
-- [Cloud providers](docs/cloud.md)
-- [OpenStack](docs/openstack.md)
-- [AWS](docs/aws.md)
-- [Azure](docs/azure.md)
-- [vSphere](docs/vsphere.md)
-- [Equinix Metal](docs/equinix-metal.md)
-- [Large deployments](docs/large-deployments.md)
-- [Adding/replacing a node](docs/nodes.md)
-- [Upgrades basics](docs/upgrades.md)
-- [Air-Gap installation](docs/offline-environment.md)
-- [NTP](docs/ntp.md)
-- [Hardening](docs/hardening.md)
-- [Mirror](docs/mirror.md)
-- [Roadmap](docs/roadmap.md)
