@@ -41,7 +41,7 @@ then run the following steps:
 
 ```ShellSession
 # clone the Kubespray repository
-git clone https://github.com/kubernetes-incubator/kubespray.git
+git clone https://github.com/filipdadgar/kubespray-k8.git
 
 # install python3-pip and git
 sudo apt install python3-pip git -y
@@ -52,9 +52,6 @@ sudo pip3 install -r requirements.txt
 
 # install Python dependencies
 sudo pip3 install -r contrib/inventory_builder/requirements.txt
-
-# copy sample of inventory to kubecluster
-cp -rfp inventory/sample inventory/kubecluster
 
 # create variable IPS
 declare -a IPS=(192.168.1.9 192.168.1.10 192.168.1.11)
@@ -110,6 +107,8 @@ kubectl get nodes --kubeconfig=/etc/kubernetes/admin.conf
 # copy the kubeconfig file
 scp masternode:/etc/kubernetes/admin.conf ~/.kube/config
 
+# to reset the cluster
+ ansible-playbook -i inventory/kubecluster/hosts.yml --become --become-user=root reset.yml --private-key /Users/<user>/.ssh/id_rsa_ansible -kK
 
 ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
 ```
