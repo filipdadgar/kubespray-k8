@@ -111,7 +111,7 @@ scp masternode:/etc/kubernetes/admin.conf ~/.kube/config
  ansible-playbook -i inventory/kubecluster/hosts.yml --become --become-user=root reset.yml --private-key /Users/<user>/.ssh/id_rsa_ansible -kK
 
 ERROR! no action detected in task. This often indicates a misspelled module name, or incorrect module path.
-```
+
 This likely indicates that a task depends on a module present in ``requirements.txt``.
 
-
+```
