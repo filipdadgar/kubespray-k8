@@ -15,13 +15,13 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone \
 # See: https://github.com/pypa/pip/issues/10219
 ENV LANG=C.UTF-8
 
-WORKDIR /kubespray
-COPY *yml /kubespray/
-COPY roles /kubespray/roles
-COPY contrib /kubespray/contrib
-COPY inventory /kubespray/inventory
-COPY library /kubespray/library
-COPY extra_playbooks /kubespray/extra_playbooks
+WORKDIR /kubespray-k8
+COPY *yml /kubespray-k8/
+COPY roles /kubespray-k8/roles
+COPY contrib /kubespray-k8/contrib
+COPY inventory /kubespray-k8/inventory
+COPY library /kubespray-k8/library
+COPY extra_playbooks /kubespray-k8/extra_playbooks
 
 RUN python3 -m pip install --no-cache-dir \
     ansible==5.7.1 \
@@ -33,7 +33,7 @@ RUN python3 -m pip install --no-cache-dir \
     MarkupSafe==1.1.1 \
     ruamel.yaml==0.17.21 \
     && find / -type d -name '*__pycache__' -prune -exec rm -rf {} \; \
-    && KUBE_VERSION=$(sed -n 's/^kube_version: //p' roles/kubespray-defaults/defaults/main.yaml) \
+    && KUBE_VERSION=$(sed -n 's/^kube_version: //p' roles/kubespray-k8/defaults/main.yaml) \
     && curl -LO https://storage.googleapis.com/kubernetes-release/release/$KUBE_VERSION/bin/linux/$ARCH/kubectl \
     && chmod a+x kubectl \
     && mv kubectl /usr/local/bin/kubectl
